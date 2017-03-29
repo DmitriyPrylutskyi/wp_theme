@@ -13,6 +13,8 @@
 
 	add_theme_support('post-thumbnails');
 
+	remove_filter('the_content', 'wpautop');
+
 	register_nav_menu( 'menu', 'Main menu' );
 
 	$args = array(
@@ -27,7 +29,7 @@
 
 	register_sidebar( $args );
 		
-	function pagination($pages = '', $range = 2)
+	function pagination($pages = '', $range = 1)
 	{
 	     $showitems = ($range * 2)+1;
 	     global $paged;

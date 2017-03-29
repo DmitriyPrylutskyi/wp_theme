@@ -1,6 +1,6 @@
 <article <?php post_class('post'); ?> id="post-<?php the_ID(); ?>">
   <header>
-    <h2><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title() ?></a><a href="<?php echo get_comments_link(); ?>" class="fa fa-comment"><small> <?php echo get_comments_number(); ?></small></a></h2>
+    <h2><?php the_title() ?><span class="comment-count-approved"><sup><?php echo get_comments_number(); ?><sup></span></h2>
     <span><?php the_date( 'F d, Y \a\t h.i', 'Posted on ' ); ?> by <a href="/author/<?php the_author() ?>" title="Записи <?php the_author() ?>" rel="author"><?php the_author() ?></a></span>
   </header>
   <figure>

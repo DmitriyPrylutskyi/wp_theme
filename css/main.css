@@ -13,6 +13,34 @@
 }
 /* comments */
 
+.comment-count-approved {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 0 8px;
+    min-width: 33px;
+    height: 2em;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background-color: #72777c;
+    color: #fff;
+    font-size: 16px;
+    line-height: 41px;
+    text-align: center;
+}
+
+.comment-count-approved:after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -9px;
+    margin-left: 3px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid #72777c;
+    border-right: 5px solid transparent;
+}
+
 .comments {
   margin: 2em 0;
 }
