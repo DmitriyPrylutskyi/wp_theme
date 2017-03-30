@@ -1,4 +1,9 @@
 /* common WordPress css */
+:after, :before {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
 
 .alignleft {
   float: left;
@@ -14,35 +19,47 @@
 /* comments */
 
 .comment-count-approved {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     display: inline-block;
-    margin-left: 10px;
-    padding: 0 8px;
-    min-width: 27px;
-    height: 1.4em;
-    border: 1px solid #337ab7;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    color: #fff;
+    position: relative;
+    width: 31px;
+    height: 24px;
+    margin-left: 20px;
+    color: #337ab7;
+    -webkit-border-radius: 4px 4px 7px 7px;
+    border-radius: 4px 4px 7px 7px;
+    border: 2px solid;
+    border-bottom-color: transparent;
     font-size: 16px;
     line-height: 30px;
     text-align: center;
 }
 
-.comment-count-approved sup{
-    color: #337ab7;
+.comment-count-approved:before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-width: 0 0 2px 2px;
+    border-style: solid;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    bottom: -4px;
+    left: 6px;
 }
 
 .comment-count-approved:after {
     content: "";
-    display: block;
-    position: relative;
-    top: -10px;
-    margin-left: 1px;
-    width: 0;
-    height: 0;
-    border-top: 5px solid #337ab7;
-    border-right: 5px solid transparent;
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    border-width: 0 12px 0 6px;
+    border-style: solid;
+    bottom: 0;
+    left: 0;
 }
 
 .comments {
